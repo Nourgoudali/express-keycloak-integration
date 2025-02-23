@@ -4,11 +4,11 @@ class AuthController {
   async signup(req, res) {
     console.log("AuthController: signup method called")
     try {
-      const { firstname, lastname, username, email, password, role } = req.body
-      console.log("Received user data:", { firstname, lastname, username, email, role })
+      const { firstname, lastname, username, email, password, isAdmin,isActive,country,region,city } = req.body
+      console.log("Received user data:", { firstname, lastname, username, email })
 
       console.log("Creating user...")
-      const newUser = await AuthService.createUser({ firstname, lastname, username, email, password, role })
+      const newUser = await AuthService.createUser({ firstname, lastname, username, email, password,isAdmin,isActive,country,region,city })
       console.log("User created successfully:", newUser._id)
 
       res.status(201).json({
@@ -20,8 +20,12 @@ class AuthController {
             lastname: newUser.lastname,
             username: newUser.username,
             email: newUser.email,
-            role: newUser.role,
-          },
+            isAdmin: newUser.isAdmin,
+            isActive: newUser.isActive,
+            country: newUser.country,
+            region: newUser.region,
+            city: newUser.city,
+          },  
         },
       })
     } catch (error) {

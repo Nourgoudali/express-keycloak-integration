@@ -8,7 +8,8 @@
 
   const app = express()
   const memoryStore = new session.MemoryStore()
-
+  const multer = require('multer');
+  app.use(multer({ storage: multer.memoryStorage() }).any());
   // Middleware for JSON parsing
   app.use(express.json())
   app.use(express.urlencoded({ extended: true }))
@@ -34,8 +35,17 @@
 
   // Routes
   const authRoutes = require("./routes/authRoutes")
+  const profilRoutes = require("./routes/profilRoutes")
+  const articleRoutes = require('./routes/articleRoutes');
+  const achatRoutes = require('./routes/achatRoutes');
+  const consommationRoutes = require('./routes/consommationRoutes');
+  const fournisseurRoutes = require('./routes/fournisseurRoutes');
   app.use("/api/auth", authRoutes)
-
+  app.use('/api/profils', profilRoutes);
+  app.use('/api/articles', articleRoutes);
+  app.use('/api/achats', achatRoutes);
+  app.use('/api/consommations', consommationRoutes);
+  app.use('/api/fournisseurs', fournisseurRoutes);
   // Public route
   app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"))

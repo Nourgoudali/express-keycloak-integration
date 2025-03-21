@@ -35,18 +35,22 @@
 
   // Routes
   const authRoutes = require("./routes/authRoutes")
-  const profilRoutes = require("./routes/profilRoutes")
+  const chambreRoutes = require("./routes/chambreRoutes")
   const articleRoutes = require('./routes/articleRoutes');
   const achatRoutes = require('./routes/achatRoutes');
   const consommationRoutes = require('./routes/consommationRoutes');
   const fournisseurRoutes = require('./routes/fournisseurRoutes');
+  const factureRoutes = require('./routes/factureRoutes');
+  const notificationRoutes = require('./routes/notificationRoutes');
   app.use("/api/auth", authRoutes)
-  app.use('/api/profils', profilRoutes);
   app.use('/api/articles', articleRoutes);
   app.use('/api/achats', achatRoutes);
   app.use('/api/consommations', consommationRoutes);
   app.use('/api/fournisseurs', fournisseurRoutes);
-  // Public route
+  app.use("/api/chambres", chambreRoutes)
+  app.use("/api/factures", factureRoutes);
+  app.use('/api/notifications',notificationRoutes);
+  
   app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"))
   })

@@ -1,5 +1,14 @@
 const mongoose = require('mongoose');
-
+const getCurrentSchoolYear = () => {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = today.getMonth(); 
+  
+  if (month >= 8) {
+    return `${year}/${year + 1}`;
+  }
+  return `${year - 1}/${year}`;
+};
 const factureSchema = new mongoose.Schema({
   type: { 
     type: String, 
@@ -26,7 +35,12 @@ const factureSchema = new mongoose.Schema({
   }], 
   date: { type: Date, default: Date.now },
   montant_total: { type: Number, default: 0 },
-  image_path: { type: String } 
+  image_path: { type: String } ,
+  annee_scolaire: { 
+    type: String,
+    required: true,
+    default: getCurrentSchoolYear
+  }
 });
 
 module.exports = mongoose.model('Facture', factureSchema);

@@ -1,4 +1,4 @@
-const Chambre = require('../models/Chambre');
+const Chambre = require('../models/chambreModel');
 
 // Créer une nouvelle chambre
 exports.createChambre = (req, res) => {

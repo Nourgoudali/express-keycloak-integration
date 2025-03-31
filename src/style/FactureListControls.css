@@ -1,0 +1,125 @@
+.filter-container {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.filter-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.filter-options {
+  display: flex;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.filter-option {
+  position: relative;
+  padding: 12px 24px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  color: #4b5563;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.filter-option:last-child {
+  border-right: none;
+}
+
+.filter-option.selected {
+  background-color: #00a189;
+  color: white;
+}
+
+.filter-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.filter-label {
+  display: inline-block;
+  font-size: 14px;
+}
+
+.filter-option:hover:not(.selected) {
+  background-color: #f3f4f6;
+}
+
+/* Styles pour le dropdown des années scolaires */
+.year-dropdown-container {
+  position: relative;
+}
+
+.year-dropdown-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+  transition: all 0.2s ease;
+}
+
+.year-dropdown-button:hover {
+  background-color: #f3f4f6;
+}
+
+.calendar-icon {
+  margin-right: 8px;
+  font-size: 14px;
+  color: #00a189;
+}
+
+.chevron-icon {
+  margin-left: 8px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.year-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  min-width: 150px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.year-option {
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #4b5563;
+  transition: background-color 0.2s;
+}
+
+.year-option:hover {
+  background-color: #f3f4f6;
+}
+
+.year-option.selected {
+  background-color: #e8f5f3;
+  color: #00a189;
+  font-weight: 500;
+} 

@@ -1,0 +1,11 @@
+.facture-page {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.facture-content {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+} 

@@ -1,0 +1,66 @@
+.header {
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 15px;
+    display: flex;
+    box-shadow: 0 5px 2px #0000000d;
+  }
+  
+  .title {
+    color: #1f2937;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  
+  .iconContainer {
+    align-items: center;
+    gap: 16px;
+    display: flex;
+  }
+  
+  .iconButton {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bellIcon {
+    width: 14px;
+    height: 16px;
+    color: #9ca3af;
+  }
+  
+  .adminButton {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  
+  .adminBadge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 2px;
+  }
+  
+  .userIcon {
+    color: #4b5563;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .adminText {
+    color: #374151;
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+  }
+  

@@ -1,0 +1,118 @@
+.factures-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.factures-modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 550px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+}
+
+.factures-modal-header {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 24px;
+}
+
+.factures-modal-header h3 {
+  margin: 0;
+  color: #374151;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.factures-table-container {
+  width: 100%;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.factures-table-header {
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 12px 24px;
+  font-weight: 600;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.factures-header-cell {
+  text-align: left;
+}
+
+.factures-table-body {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.factures-table-row {
+  border-bottom: 1px solid #e5e7eb;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 12px 24px;
+  align-items: center;
+}
+
+.factures-table-row:last-child {
+  border-bottom: none;
+}
+
+.factures-table-row:hover {
+  background-color: #f9fafb;
+}
+
+.factures-table-cell {
+  text-align: left;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.download-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.download-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.factures-modal-footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fermer-button {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.fermer-button:hover {
+  background-color: #e5e7eb;
+} 
